@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
+
+.ces-theme-simple.ces-app,
+.ces-theme-simple .ces-search-form__button {
+    --brand-color: #ff9b25;
+    --secondary-color: #222;
+    --background-color: #f0f0f0;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Background colors */
+.ces-theme-simple .ces-search-form,
+.ces-theme-simple .ces-cruise,
+.ces-theme-simple .ces-modal,
+.ces-theme-simple .ces-search-form .ces-select-box__option:hover {
+    background-color: var(--background-color)
+}
+
+/* Main color */
+.ces-theme-simple .ces-search-form .ces-select-box__value,
+.ces-theme-simple .ces-search-form .ces-select-box__option,
+.ces-theme-simple .ces-search-form .ces-date-picker__input,
+.ces-theme-simple .ces-search-form .ces-search-form__button,
+.ces-theme-simple .ces-search-form .qs-arrow,
+.ces-theme-simple .ces-search-form .qs-month,
+.ces-theme-simple .ces-search-form .qs-year,
+.ces-theme-simple .ces-search-form .qs-event:not(.Sun):not(.Sat):not(.qs-active),
+.ces-theme-simple .ces-search-results .ces-cruise-tag__value,
+.ces-theme-simple .ces-search-results .ces-cruise-details__tag,
+.ces-theme-simple .ces-modal .ces-cruise-fare__label,
+.ces-theme-simple .ces-modal .ces-cruise-modal__table-row_hoverable:hover td:hover,
+.ces-theme-simple .ces-modal .ces-book__field,
+.ces-theme-simple .ces-modal .ces-book__textarea {
+    color: var(--brand-color)
+}
+
+.ces-theme-simple .ces-search-form .ces-select-box__value:after {
+    border-color: var(--brand-color)
+}
+
+.ces-theme-simple .ces-search-form .ces-icon,
+.ces-theme-simple .ces-search-form .ces-checkbox-option__label:before,
+.ces-theme-simple .ces-search-form .ces-form-switch__slider:before,
+.ces-theme-simple .ces-search-results .ces-cruise-options__price-list,
+.ces-theme-simple .ces-search-results .ces-card-date__button,
+.ces-theme-simple .ces-search-results .ces-cruise-options__info .ces-bold:before {
+    background-color: var(--brand-color)
+}
+
+.ces-theme-simple .ces-search-form .ces-select-box__value,
+.ces-theme-simple .ces-search-form .ces-person-control__button,
+.ces-theme-simple .ces-search-form .ces-date-picker__input,
+.ces-theme-simple .ces-search-form .ces-form-switch__slider,
+.ces-theme-simple .ces-search-form .ces-search-form__button,
+.ces-theme-simple .ces-search-form .ces-select-box__options,
+.ces-theme-simple .ces-search-form .qs-datepicker-container,
+.ces-theme-simple .ces-search-results .ces-cruise-tag__value,
+.ces-theme-simple .ces-search-results .ces-cruise-details__tag--type,
+.ces-theme-simple .ces-modal .ces-cruise-fare__label,
+.ces-theme-simple .ces-modal .ces-cruise-modal__table-row_hoverable:hover td:hover,
+.ces-theme-simple .ces-modal .ces-book__field,
+.ces-theme-simple .ces-modal .ces-book__textarea {
+    background-color: var(--secondary-color)
+}
+
+.ces-theme-simple .ces-search-form .ces-select-box__options:before,
+.ces-theme-simple .ces-search-results .ces-icon-map,
+.ces-theme-simple .ces-search-results .ces-icon-visa {
+    border-bottom-color: var(--secondary-color)
+}
+
+.ces-theme-simple .ces-search-form .ces-select-box__label,
+.ces-theme-simple .ces-search-form .ces-person-control__label,
+.ces-theme-simple .ces-search-form .ces-date-picker__label,
+.ces-theme-simple .ces-search-form .ces-form-switch__label,
+.ces-theme-simple .ces-search-form .ces-person-control__value,
+.ces-theme-simple .ces-search-form .ces-person-character__age,
+.ces-theme-simple .ces-search-results .ces-cruise-tag__title,
+.ces-theme-simple .ces-search-results .ces-cruise__title,
+.ces-theme-simple .ces-search-results .ces-cruise__itinerary,
+.ces-theme-simple .ces-search-results .ces-card-date__title,
+.ces-theme-simple .ces-search-results .ces-cruise-options__info,
+.ces-theme-simple .ces-search-results .ces-cruise-options__info .ces-bold span,
+.ces-theme-simple .ces-search-results .ces-modal-header,
+.ces-theme-simple .ces-search-results .ces-modal-footer,
+.ces-theme-simple .ces-modal,
+.ces-theme-simple .ces-modal .ces-book__list,
+.ces-theme-simple .ces-modal .ces-book__label,
+.ces-theme-simple .ces-modal .ces-cruise-modal__table tr,
+.ces-theme-simple .ces-search-results .ces-card-date__button {
+    color: var(--secondary-color)
+}
+
+.ces-theme-simple .ces-search-form .ces-checkbox-option__label--checked:after {
+    border-color: var(--secondary-color);
+}
+
+/* custom */
+.ces-theme-simple .ces-search-results .ces-card-date__button {
+    opacity: .3;
+}
+
+.ces-theme-simple .ces-search-results .ces-card-date__button:hover,
+.ces-theme-simple .ces-search-results .ces-card-date__button--selected {
+    opacity: 1;
+}

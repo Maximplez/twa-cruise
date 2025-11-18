@@ -1,0 +1,11 @@
+*{box-sizing:border-box}
+body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Helvetica,Arial,sans-serif;margin:0;padding:24px;background:#0b0f17;color:#e6eaf2}
+h1{margin:0 0 8px;font-size:22px}
+label{display:block;margin-top:16px;margin-bottom:6px;color:#9fb0c7}
+.muted{color:#9fb0c7}
+.container{max-width:520px;margin:0 auto;padding:20px;border:1px solid #1b2537;border-radius:16px;background:rgba(255,255,255,0.02)}
+input{width:100%;padding:12px 14px;border:1px solid #24314a;border-radius:12px;background:#0f1522;color:#e6eaf2}
+button{margin-top:16px;padding:10px 14px;border:1px solid #24314a;border-radius:12px;background:transparent;color:#e6eaf2;cursor:pointer}
+button:hover{background:#121a29}
+.pre{white-space:pre-wrap;background:#0f1522;border:1px solid #24314a;border-radius:12px;padding:12px;margin-top:12px}
+.ghost{opacity:.9}
