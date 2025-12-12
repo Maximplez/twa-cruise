@@ -104,3 +104,44 @@
 .ces-theme-simple .ces-search-results .ces-card-date__button--selected {
     opacity: 1;
 }
+
+/* === Fix: visibility of "РЕЗУЛЬТАТЫ ПОИСКА" and "Сортировать по" on dark page backgrounds (e.g., Telegram dark theme) === */
+/* The widget's results header sits on a transparent background by default, so on dark outer backgrounds the text becomes unreadable. */
+.ces-theme-simple .ces-search-results,
+.ces-theme-dark .ces-search-results {
+    background-color: var(--background-color);
+}
+
+/* Title + filter label */
+.ces-theme-simple .ces-search-results__title,
+.ces-theme-simple .ces-search-results__filter,
+.ces-theme-dark .ces-search-results__title,
+.ces-theme-dark .ces-search-results__filter {
+    color: var(--secondary-color);
+}
+
+/* Filter block background + border for better contrast */
+.ces-theme-simple .ces-search-results__filter {
+    background: rgba(0, 0, 0, 0.05); /* fix invalid rgba(0,0,0,05) from app.css */
+}
+
+.ces-theme-dark .ces-search-results__filter {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.25);
+}
+
+/* Select underline + text color */
+.ces-theme-simple .ces-search-results__filter_select {
+    color: var(--secondary-color);
+    border-bottom-color: rgba(0, 0, 0, 0.35);
+}
+
+.ces-theme-dark .ces-search-results__filter_select {
+    color: var(--secondary-color);
+    border-bottom-color: rgba(255, 255, 255, 0.55);
+}
+
+.ces-theme-dark .ces-search-results__filter_select:hover {
+    border-bottom-color: var(--secondary-color);
+}
+
