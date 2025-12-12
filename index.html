@@ -1,81 +1,90 @@
-
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Telegram Web App</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="icon" href="data:,">
+  <title>Круизы · Мини‑приложение</title>
+
+  <!-- (Опционально) базовые стили сайта/демо -->
+  <link rel="stylesheet" href="assets/bootstrap.css">
+  <link rel="stylesheet" href="assets/styles.css">
+
+  <!-- Стили виджета -->
+  <link rel="stylesheet" href="assets/app.c8a9b738.css">
+  <link rel="stylesheet" href="assets/app.css">
+  <link rel="stylesheet" href="assets/dark.css">
+  <link rel="stylesheet" href="assets/simple.css">
+
   <style>
-    /* General styling */
-    body {
-      background: #f9f9f9; /* Light background for both themes */
-      font-family: Arial, sans-serif;
-      color: #333; /* Dark text for contrast */
-      margin: 0;
-      padding: 0;
+    /* Делает верх/низ читаемым в светлой и тёмной теме Telegram,
+       не трогая стили самого виджета */
+    :root { color-scheme: light dark; }
+
+    body{
+      margin:0;
+      background: var(--tg-theme-secondary-bg-color, #f3f4f6);
+      color: var(--tg-theme-text-color, #111);
     }
 
-    .twa-wrap {
+    .twa-wrap{
       max-width: 1200px;
       margin: 16px auto;
       padding: 0 12px;
-      background: #fff; /* Light background for the content */
-      border-radius: 12px;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     }
 
-    h1 {
+    /* “шапка” с текстом — на фоне, который читается в обеих темах */
+    .twa-head{
+      margin: 12px 0 14px;
+      padding: 14px 14px 12px;
+      border-radius: 14px;
+      background: var(--tg-theme-bg-color, #fff);
+      box-shadow: 0 6px 24px rgba(0,0,0,.08);
+    }
+
+    h1{
       font-size: 28px;
-      margin: 12px 0 8px;
-      color: #111; /* Dark color for heading */
+      margin: 0 0 6px;
+      color: var(--tg-theme-text-color, #111);
     }
 
-    .sub {
-      color: #777;
-      margin-bottom: 16px;
-    }
-
-    /* Adjust for dark mode */
-    @media (prefers-color-scheme: dark) {
-      body {
-        background: #181818; /* Darker background for dark mode */
-        color: #f0f0f0; /* Light text for dark mode */
-      }
-
-      .twa-wrap {
-        background: #222; /* Dark background for content */
-        color: #f0f0f0; /* Light text for content */
-        box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1);
-      }
-
-      h1 {
-        color: #f0f0f0; /* Light text for heading in dark mode */
-      }
-
-      .sub {
-        color: #bbb; /* Lighter text for sub-text */
-      }
+    .sub{
+      margin: 0;
+      color: var(--tg-theme-hint-color, #6b7280);
     }
   </style>
-  <script>
-    window.cesSettings = {
-      email: "robocraft0007@gmail.com",
-      showResults: true,
-      currencies: ["EUR", "RUB", "USD"],
-      theme: "simple"
-    };
-  </script>
 </head>
 <body>
   <div class="twa-wrap">
-    <h1>Подбор круиза</h1>
-    <div class="sub">Выберите параметры для поиска подходящих туров.</div>
+    <div class="twa-head">
+      <h1>Морские круизы</h1>
+      <p class="sub">Выберите параметры — и отправьте их в чат бота</p>
+    </div>
+
+    <!-- Корневой элемент виджета -->
     <div id="ces" class="ces-app ces-theme-simple"></div>
   </div>
 
-  <script src="/assets/bootstrap.min.js"></script>
-  <script src="/assets/jquery.min.js"></script>
-  <script src="/assets/app.js"></script>
-  <script src="/assets/twa-bridge.js"></script>
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+
+  <!-- Настройки виджета -->
+  <script>
+    window.cesSettings = {
+      email : "robocraft0007@gmail.com",
+      showResults: true,
+      currencies: ["EUR","RUB","USD"],
+      theme: "simple"
+    };
+  </script>
+
+  <!-- Скрипты -->
+  <script src="assets/jquery.min.js"></script>
+  <script src="assets/bootstrap.min.js"></script>
+
+  <!-- Основной скрипт виджета (из демо) -->
+  <script src="assets/app.js"></script>
+
+  <!-- Мост с Telegram -->
+  <script src="twa-bridge.js"></script>
 </body>
 </html>
